@@ -104,6 +104,8 @@ Lista detallada con precios aproximados en [`hardware/lista_materiales.md`](hard
 
 Pinout completo con límites eléctricos en [`docs/02_hardware_uno_r3.md`](docs/02_hardware_uno_r3.md). Diagramas de cada montaje en [`hardware/conexiones.md`](hardware/conexiones.md).
 
+📄 **Datasheet oficial:** [Arduino UNO R3 — A000066](https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf)
+
 ## 🚀 Cómo usar el repositorio
 
 1. Instala el IDE siguiendo [`docs/01_instalacion.md`](docs/01_instalacion.md).

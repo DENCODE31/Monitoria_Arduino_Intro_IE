@@ -129,3 +129,15 @@ Funcionalmente son iguales para esta monitoría. Si el clon no carga programas, 
 - No trabajes con la placa sobre superficies metálicas.
 - Usa gafas si vas a cortar o soldar (no aplica en protoboard).
 - Si hueles a quemado o ves humo: **desconecta el USB**, no lo pienses.
+
+---
+
+## 9. Referencias oficiales
+
+| Documento | Enlace |
+|---|---|
+| Datasheet Arduino UNO R3 (A000066) | [A000066-datasheet.pdf](https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf) |
+| Documentación de la placa | [docs.arduino.cc/hardware/uno-rev3](https://docs.arduino.cc/hardware/uno-rev3) |
+
+> El datasheet trae el esquemático completo, el mapa de pines y los límites eléctricos absolutos. Es la fuente que se cita cuando hay duda sobre corriente o voltaje.
+
