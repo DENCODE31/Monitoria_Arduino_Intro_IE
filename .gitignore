@@ -1,0 +1,17 @@
+# Compilados de Arduino
+build/
+*.hex
+*.elf
+*.bin
+*.map
+
+# Arduino IDE
+*.bak
+*.orig
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*~
