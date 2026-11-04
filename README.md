@@ -61,7 +61,9 @@ Monitoria_Arduino_Intro_IE/
 │   ├── 02_hardware_uno_r3.md    # pinout, límites de corriente, alimentación
 │   ├── 03_lenguaje_esencial.md  # el lenguaje mínimo para la sesión
 │   ├── 04_buenas_practicas.md   # antirrebote, millis(), protecciones
-│   └── CHEATSHEET.md            # resumen de una página
+│   ├── CHEATSHEET.md            # resumen de una página
+│   └── img/
+│       └── pinout_uno_r3.png    # diagrama de pinout del UNO R3
 ├── ejemplos/
 │   ├── 01_blink/
 │   ├── 02_semaforo_peatonal/
@@ -95,6 +97,12 @@ Monitoria_Arduino_Intro_IE/
 | Cable USB | 1 | Programación y alimentación |
 
 Lista detallada con precios aproximados en [`hardware/lista_materiales.md`](hardware/lista_materiales.md).
+
+### 📌 Pinout del UNO R3
+
+![Diagrama de pinout del Arduino UNO R3](docs/img/pinout_uno_r3.png)
+
+Pinout completo con límites eléctricos en [`docs/02_hardware_uno_r3.md`](docs/02_hardware_uno_r3.md). Diagramas de cada montaje en [`hardware/conexiones.md`](hardware/conexiones.md).
 
 ## 🚀 Cómo usar el repositorio
 

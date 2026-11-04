@@ -27,6 +27,10 @@ Todo lo que hay que saber antes de conectar el primer cable.
 
 ## 2. Mapa de pines
 
+![Diagrama de pinout del Arduino UNO R3](img/pinout_uno_r3.png)
+
+*Diagrama de pinout del Arduino UNO R3. Guárdalo en el celular para consultarlo durante la monitoría.*
+
 ```
                         ┌─────────────────────────┐
                         │      ARDUINO UNO R3     │
