@@ -22,7 +22,7 @@ El objetivo es que cualquier estudiante, **sin experiencia previa en programaci�
 
 | Módulo | Qué encontrarás | Estado |
 |---|---|---|
-| 📥 Instalación | Arduino IDE 2.x en Windows / Linux / macOS, drivers CH340, permisos y puerto | ✅ |
+| 📥 Instalación | Arduino IDE 2.x en Windows / Linux / macOS, **drivers CH340 y CP2102**, permisos y puerto | ✅ |
 | 🔌 Hardware | Pinout del UNO R3, límites eléctricos reales, alimentación | ✅ |
 | 💻 Lenguaje | `setup()`, `loop()`, variables, `digitalWrite`, `analogRead`, `Serial`, `millis()` | ✅ |
 | 🧪 Ejemplos | 9 sketches numerados y funcionales | ✅ |
@@ -57,7 +57,7 @@ Monitoria_Arduino_Intro_IE/
 ├── LICENSE
 ├── .gitignore
 ├── docs/
-│   ├── 01_instalacion.md        # IDE por sistema operativo + solución de errores
+│   ├── 01_instalacion.md        # IDE por SO + drivers CH340/CP2102 + errores
 │   ├── 02_hardware_uno_r3.md    # pinout, límites de corriente, alimentación
 │   ├── 03_lenguaje_esencial.md  # el lenguaje mínimo para la sesión
 │   ├── 04_buenas_practicas.md   # antirrebote, millis(), protecciones

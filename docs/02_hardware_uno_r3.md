@@ -113,12 +113,12 @@ float voltaje = valor * (5.0 / 1023.0);      // a voltios
 | Aspecto | Original | Clon típico |
 |---|---|---|
 | USB-Serie | ATmega16U2 | CH340 / CP2102 |
-| Driver | Incluido | Requiere CH340 (ver instalación) |
+| Driver | Incluido | Requiere driver CH340 o CP2102 (ver [instalación, sección 3](01_instalacion.md#3-drivers-del-chip-usb-uart-ch340-y-cp2102)) |
 | Puerto Linux | `/dev/ttyACM0` | `/dev/ttyUSB0` |
 | Calidad del regulador | Buena | Variable: no exceder 9 V |
 | Precio (COP) | ~$90.000 – $130.000 | ~$30.000 – $45.000 |
 
-Funcionalmente son iguales para esta monitoría. Si el clon no carga programas, el 90 % de las veces es **driver CH340** o **cable sin datos**.
+Funcionalmente son iguales para esta monitoría. Si el clon no carga programas, el 90 % de las veces es **driver CH340/CP2102** o **cable sin datos**.
 
 ---
 

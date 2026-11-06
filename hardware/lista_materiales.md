@@ -53,7 +53,7 @@ Precios de referencia en **COP** (Colombia, 2026). Varían según proveedor, ciu
 
 ## Cómo reconocer un clon bueno
 
-- Chip USB **CH340** visible y con driver disponible.
+- Chip USB **CH340** o **CP2102** visible y con driver disponible (ver [`docs/01_instalacion.md`](../docs/01_instalacion.md#3-drivers-del-chip-usb-uart-ch340-y-cp2102)).
 - Regulador AMS1117 (no un transistor improvisado).
 - Serigrafía "UNO R3" legible y pines alineados con la original.
 - Cristal de 16 MHz presente (a veces SMD pequeño).

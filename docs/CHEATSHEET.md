@@ -89,7 +89,7 @@ PWM:                 duty = valor / 255 · 100 %
 
 | Síntoma | Revisa |
 |---|---|
-| `(no ports available)` | Cable USB, driver CH340, placa conectada |
+| `(no ports available)` | Cable USB, driver CH340/CP2102, placa conectada |
 | `Permission denied` en Linux | `sudo usermod -aG dialout $USER` + reiniciar sesión |
 | `not in sync` | Board/puerto incorrecto, Monitor Serial abierto |
 | Monitor Serial con basura | Baudaje distinto a `Serial.begin()` |
