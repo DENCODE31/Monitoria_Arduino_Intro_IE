@@ -13,6 +13,8 @@ Sketches progresivos. Cada carpeta contiene un archivo `.ino` con el mismo nombr
 | 07 | `07_ldr_alarma` | Sensor analógico, umbral, histéresis | A0, D9, D13 |
 | 08 | `08_ultrasonido` | `pulseIn()`, sensores de tiempo | D9, D10, D13 |
 | 09 | `09_control_serial` | Comandos por puerto serial | D9 |
+| 10 | `10_ultrasonico_led_proyecto` | `pulseIn()`, umbral de distancia, pines del proyecto final | D3, D2, D8 |
+| 11 | `11_ldr_led_proyecto` | `analogRead`, umbral de luz, pines del proyecto final | A0, D8 |
 
 ## Cómo abrir un ejemplo
 
@@ -36,3 +38,5 @@ arduino-cli upload  --fqbn arduino:avr:uno -p /dev/ttyACM0 ejemplos/05_pwm_respi
 ```
 
 Los ejemplos 3, 5, 6 y 9 introducen `millis()`; a partir de ahí no se usa `delay()` para tareas múltiples.
+
+Los ejemplos 10 y 11 usan los pines del proyecto final (maqueta del parqueadero), para no recablear después.
