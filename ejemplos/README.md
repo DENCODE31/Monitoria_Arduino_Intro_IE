@@ -15,6 +15,7 @@ Sketches progresivos. Cada carpeta contiene un archivo `.ino` con el mismo nombr
 | 09 | `09_control_serial` | Comandos por puerto serial | D9 |
 | 10 | `10_ultrasonico_led_proyecto` | `pulseIn()`, umbral de distancia, pines del proyecto final | D3, D2, D8 |
 | 11 | `11_ldr_led_proyecto` | `analogRead`, umbral de luz, pines del proyecto final | A0, D8 |
+| 12 | `12_ldr_led_notification` | Mensajes en el Monitor Serial según la luz | A0, D8 |
 
 ## Cómo abrir un ejemplo
 
