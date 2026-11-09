@@ -27,7 +27,7 @@ void loop() {
     } else {
       Serial.println(/* mensaje para mucha luz */);
     }
-    estadoAnterior = /* ¿qué debe recordar el programa ahora? */;
+    estadoAnterior = /* guarda el estado de AHORA para compararlo en la próxima vuelta */;
   }
 
   digitalWrite(/* pin */, /* qué valor debe recibir el LED */);
