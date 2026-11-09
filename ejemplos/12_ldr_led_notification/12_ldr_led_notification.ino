@@ -1,36 +1,36 @@
 // ---------- PINES Y UMBRAL ----------
-const int PIN_LDR = A0;
-const int PIN_LED = 8;
-const int UMBRAL  = 200;
+const int PIN_LDR = /* designa aquí tu pin */;
+const int PIN_LED = /* designa aquí tu pin */;
+const int UMBRAL  = /* valor que separa "poca luz" de "mucha luz" */;
 
 // Memoria del programa: guarda cómo estaba la luz la última vez que miramos.
 // true = había poca luz, false = había mucha luz
 bool estadoAnterior = false;
 
 void setup() {
-  Serial.begin(9600);
-  pinMode(PIN_LDR, INPUT);   // LDR
-  pinMode(PIN_LED, OUTPUT);  // LED
+  Serial.begin(/* velocidad del monitor serial */);
+  pinMode(/* pin */, /* ¿entrada o salida? */);   // LDR
+  pinMode(/* pin */, /* ¿entrada o salida? */);   // LED
 }
 
 void loop() {
-  int valor = analogRead(PIN_LDR);
+  int valor = analogRead(/* pin de la LDR */);
 
   // pocaLuz vale true si la LDR está recibiendo poca luz, y false si recibe mucha.
   // Se decide comparando el valor leído con el umbral.
   bool pocaLuz = (valor < UMBRAL);
 
   // Solo entramos aquí cuando la luz CAMBIÓ respecto a la última vez
-  if (pocaLuz != estadoAnterior) {
+  if (/* ¿el estado actual es distinto del anterior? */) {
     if (pocaLuz) {
-      Serial.println("poca luz");
+      Serial.println(/* mensaje para poca luz */);
     } else {
-      Serial.println("muchas luces");
+      Serial.println(/* mensaje para mucha luz */);
     }
-    estadoAnterior = pocaLuz;
+    estadoAnterior = /* ¿qué debe recordar el programa ahora? */;
   }
 
-  digitalWrite(PIN_LED, pocaLuz);
+  digitalWrite(/* pin */, /* qué valor debe recibir el LED */);
 
   delay(50);
 }
