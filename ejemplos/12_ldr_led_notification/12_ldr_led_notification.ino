@@ -1,32 +1,36 @@
-// Sesion del 6 de noviembre: variante del ejemplo 11 con mensajes en el Monitor Serial.
-// Conexiones (las mismas del proyecto final):
-//   LDR de 5 V a A0, y resistencia de 10 kohm de A0 a GND (divisor de voltaje).
-//   LED en el pin 8 con una resistencia de 220 ohm en serie (pata larga hacia el pin).
-// Con mucha luz la lectura es alta; al taparla, baja. Rango de 0 a 1023.
-// Abre el Monitor Serial a 9600 baudios: imprime "poca luz" al tapar la LDR.
-
+// ---------- PINES Y UMBRAL ----------
 const int PIN_LDR = A0;
 const int PIN_LED = 8;
+const int UMBRAL  = 200;
 
-// Si la lectura baja de este valor, se considera que hay poca luz.
-// Calibren: pongan el valor a mitad de camino entre la lectura con luz y con la LDR tapada.
-const int UMBRAL = 200;
+// Memoria del programa: guarda cómo estaba la luz la última vez que miramos.
+// true = había poca luz, false = había mucha luz
+bool estadoAnterior = false;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(PIN_LED, OUTPUT);
+  pinMode(PIN_LDR, INPUT);   // LDR
+  pinMode(PIN_LED, OUTPUT);  // LED
 }
 
 void loop() {
-  int luz = analogRead(PIN_LDR);
+  int valor = analogRead(PIN_LDR);
 
-  if (luz < UMBRAL) {
-    Serial.println("poca luz");
-    digitalWrite(PIN_LED, HIGH);
-  } else {
-    Serial.println("muchas luces");
-    digitalWrite(PIN_LED, LOW);
+  // pocaLuz vale true si la LDR está recibiendo poca luz, y false si recibe mucha.
+  // Se decide comparando el valor leído con el umbral.
+  bool pocaLuz = (valor < UMBRAL);
+
+  // Solo entramos aquí cuando la luz CAMBIÓ respecto a la última vez
+  if (pocaLuz != estadoAnterior) {
+    if (pocaLuz) {
+      Serial.println("poca luz");
+    } else {
+      Serial.println("muchas luces");
+    }
+    estadoAnterior = pocaLuz;
   }
 
-  delay(500);
+  digitalWrite(PIN_LED, pocaLuz);
+
+  delay(50);
 }
