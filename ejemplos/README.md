@@ -16,6 +16,7 @@ Sketches progresivos. Cada carpeta contiene un archivo `.ino` con el mismo nombr
 | 10 | `10_ultrasonico_led_proyecto` | `pulseIn()`, umbral de distancia, pines del proyecto final | D3, D2, D8 |
 | 11 | `11_ldr_led_proyecto` | `analogRead`, umbral de luz, pines del proyecto final | A0, D8 |
 | 12 | `12_ldr_led_notification` | Mensajes en el Monitor Serial según la luz | A0, D8 |
+| 13 | `13_servo_barrera` | HC-SR04 + servo, barrera que abre al acercarse | D9, D10, D3 |
 
 ## Cómo abrir un ejemplo
 
@@ -41,3 +42,5 @@ arduino-cli upload  --fqbn arduino:avr:uno -p /dev/ttyACM0 ejemplos/05_pwm_respi
 Los ejemplos 3, 5, 6 y 9 introducen `millis()`; a partir de ahí no se usa `delay()` para tareas múltiples.
 
 Los ejemplos 10 y 11 usan los pines del proyecto final (maqueta del parqueadero), para no recablear después.
+
+El 13 alimenta el servo desde una fuente externa de 5 V, nunca desde el pin 5V del Arduino: el servo pide picos de 500 mA.
