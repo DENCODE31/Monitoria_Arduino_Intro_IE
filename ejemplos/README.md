@@ -17,6 +17,7 @@ Sketches progresivos. Cada carpeta contiene un archivo `.ino` con el mismo nombr
 | 11 | `11_ldr_led_proyecto` | `analogRead`, umbral de luz, pines del proyecto final | A0, D8 |
 | 12 | `12_ldr_led_notification` | Mensajes en el Monitor Serial según la luz | A0, D8 |
 | 13 | `13_servo_barrera` | HC-SR04 + servo, barrera que abre al acercarse | D9, D10, D3 |
+| 14 | `14_servo_buzzer` | HC-SR04 + servo + buzzer, aviso sonoro al abrir y cerrar | D9, D10, D3, D8 |
 
 ## Cómo abrir un ejemplo
 
@@ -43,4 +44,6 @@ Los ejemplos 3, 5, 6 y 9 introducen `millis()`; a partir de ahí no se usa `dela
 
 Los ejemplos 10 y 11 usan los pines del proyecto final (maqueta del parqueadero), para no recablear después.
 
-El 13 alimenta el servo desde una fuente externa de 5 V, nunca desde el pin 5V del Arduino: el servo pide picos de 500 mA.
+El 13 y el 14 alimentan el servo desde una fuente externa de 5 V, nunca desde el pin 5V del Arduino: el servo pide picos de 500 mA.
+
+El 14 suma un **buzzer pasivo** en D8: pitido agudo (1500 Hz) al abrir y grave (800 Hz) al cerrar, apagado con `millis()` para no frenar la medicion. Si tienes buzzer activo, cambia `tone()` por `digitalWrite`.
