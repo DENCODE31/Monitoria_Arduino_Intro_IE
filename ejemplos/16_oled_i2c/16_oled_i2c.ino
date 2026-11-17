@@ -3,7 +3,12 @@
  * Monitoria: Instalacion y manejo de Arduino - Intro. Ing. Electronica (UNAL)
  * Placa: Arduino UNO R3
  * Concepto: bus I2C, pantalla de pixeles, buffer de Video, fuentes
- * Montaje: OLED VCC a 3.3V o 5V segun el modulo, GND a GND, SDA a A4, SCL a A5
+ * Conexiones del OLED:
+ *   VCC -> 3.3V o 5V segun el regulador del modulo
+ *   GND -> GND
+ *   SDA -> A4
+ *   SCL -> A5
+ *   Direccion I2C: 0x3C (algunas pantallas usan 0x3D)
  *
  * Librerias necesarias (Programa > Incluir libreria > Administrar librerias):
  *   - Adafruit GFX Library

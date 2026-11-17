@@ -3,7 +3,12 @@
  * Monitoria: Instalacion y manejo de Arduino - Intro. Ing. Electronica (UNAL)
  * Placa: Arduino UNO R3
  * Concepto: bus I2C, direcciones de dispositivo, LCD HD44780 en modo 4 bits
- * Montaje: modulo LCD I2C con VCC a 5V, GND a GND, SDA a A4, SCL a A5
+ * Conexiones del modulo LCD I2C:
+ *   VCC -> 5V
+ *   GND -> GND
+ *   SDA -> A4
+ *   SCL -> A5
+ *   Direccion I2C: 0x27 (algunos modulos usan 0x3F)
  *
  * Libreria necesaria: LiquidCrystal_I2C (Programa > Incluir libreria >
  * Administrar librerias > buscar "LiquidCrystal_I2C" > instalar la de
