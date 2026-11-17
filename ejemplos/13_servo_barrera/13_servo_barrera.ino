@@ -4,8 +4,14 @@
  * Placa: Arduino UNO R3
  * Concepto: combinar sensor de distancia con un actuador, libreria Servo,
  *           histeresis para que la barra no tiemble
- * Montaje: HC-SR04 (VCC=5V, Trig=D9, Echo=D10, GND=GND).
- *          Servo: senal en D3, VCC a fuente de 5 V, GND comun.
+ * Conexiones:
+ *   HC-SR04 VCC -> 5V
+ *   HC-SR04 GND -> GND
+ *   HC-SR04 TRIG -> D9
+ *   HC-SR04 ECHO -> D10
+ *   Servo senal -> D3
+ *   Servo VCC -> fuente externa de 5 V
+ *   Servo GND y HC-SR04 GND -> GND del Arduino (GND comun)
  *
  * OJO: el servo NO se alimenta del pin 5V del Arduino. Consume picos de
  *      500 mA y reinicia la placa. Usa una fuente externa de 5 V con GND comun.
