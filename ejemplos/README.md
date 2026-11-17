@@ -18,6 +18,8 @@ Sketches progresivos. Cada carpeta contiene un archivo `.ino` con el mismo nombr
 | 12 | `12_ldr_led_notification` | Mensajes en el Monitor Serial según la luz | A0, D8 |
 | 13 | `13_servo_barrera` | HC-SR04 + servo, barrera que abre al acercarse | D9, D10, D3 |
 | 14 | `14_servo_buzzer` | HC-SR04 + servo + buzzer, aviso sonoro al abrir y cerrar | D9, D10, D3, D8 |
+| 15 | `15_lcd_i2c` | LCD 16x2 con modulo PCF8574 | A4, A5 |
+| 16 | `16_oled_i2c` | OLED SSD1306 128x64, buffer de pixeles | A4, A5 |
 
 ## Cómo abrir un ejemplo
 
@@ -37,7 +39,7 @@ arduino-cli upload  --fqbn arduino:avr:uno -p /dev/ttyACM0 ejemplos/05_pwm_respi
 ## Orden sugerido
 
 ```
-01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09
+01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 15 → 16
 ```
 
 Los ejemplos 3, 5, 6 y 9 introducen `millis()`; a partir de ahí no se usa `delay()` para tareas múltiples.
@@ -47,3 +49,5 @@ Los ejemplos 10 y 11 usan los pines del proyecto final (maqueta del parqueadero)
 El 13 y el 14 alimentan el servo desde una fuente externa de 5 V, nunca desde el pin 5V del Arduino: el servo pide picos de 500 mA.
 
 El 14 suma un **buzzer pasivo** en D8: pitido agudo (1500 Hz) al abrir y grave (800 Hz) al cerrar, apagado con `millis()` para no frenar la medicion. Si tienes buzzer activo, cambia `tone()` por `digitalWrite`.
+
+El 15 y el 16 usan el bus I2C en A4/A5 y necesitan librerias que no vienen con el IDE. Direcciones, cableado y escaner en [`docs/05_pantallas_i2c.md`](../docs/05_pantallas_i2c.md).

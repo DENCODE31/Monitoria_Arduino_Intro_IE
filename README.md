@@ -14,7 +14,7 @@ El objetivo es que cualquier estudiante, **sin experiencia previa en programaci�
 - El **Arduino IDE instalado y funcionando** en su computador (Windows, Linux o macOS).
 - La **placa reconocida** por el sistema y el primer programa cargado.
 - Criterio para **conectar componentes sin quemar nada** (corriente, voltaje, pines).
-- **14 ejemplos de código** progresivos, desde un LED que parpadea hasta una barrera con servo y aviso sonoro.
+- **16 ejemplos de código** progresivos, desde un LED que parpadea hasta pantallas I2C.
 
 > Todo el código está comentado en español y pensado para leerse en clase, no para copiarse a ciegas.
 
@@ -25,7 +25,7 @@ El objetivo es que cualquier estudiante, **sin experiencia previa en programaci�
 | 📥 Instalación | Arduino IDE 2.x en Windows / Linux / macOS, **drivers CH340 y CP2102**, permisos y puerto | ✅ |
 | 🔌 Hardware | Pinout del UNO R3, límites eléctricos reales, alimentación | ✅ |
 | 💻 Lenguaje | `setup()`, `loop()`, variables, `digitalWrite`, `analogRead`, `Serial`, `millis()` | ✅ |
-| 🧪 Ejemplos | 14 sketches numerados y funcionales | ✅ |
+| 🧪 Ejemplos | 16 sketches numerados y funcionales | ✅ |
 | 🧰 Cheatsheet | Resumen de una página para tener al lado mientras programas | ✅ |
 | 🛠️ Buenas prácticas | Antirrebote, `millis()` vs `delay()`, protecciones eléctricas | ✅ |
 
@@ -61,6 +61,7 @@ Monitoria_Arduino_Intro_IE/
 │   ├── 02_hardware_uno_r3.md    # pinout, límites de corriente, alimentación
 │   ├── 03_lenguaje_esencial.md  # el lenguaje mínimo para la sesión
 │   ├── 04_buenas_practicas.md   # antirrebote, millis(), protecciones
+│   ├── 05_pantallas_i2c.md      # LCD 16x2 y OLED SSD1306
 │   ├── CHEATSHEET.md            # resumen de una página
 │   └── img/
 │       └── pinout_uno_r3.png    # diagrama de pinout del UNO R3
@@ -78,7 +79,9 @@ Monitoria_Arduino_Intro_IE/
 │   ├── 11_ldr_led_proyecto/
 │   ├── 12_ldr_led_notification/
 │   ├── 13_servo_barrera/
-│   └── 14_servo_buzzer/
+│   ├── 14_servo_buzzer/
+│   ├── 15_lcd_i2c/
+│   └── 16_oled_i2c/
 └── hardware/
     ├── lista_materiales.md      # qué comprar y cuánto cuesta (COP)
     └── conexiones.md            # diagramas de cada montaje
@@ -98,6 +101,8 @@ Monitoria_Arduino_Intro_IE/
 | LDR | 1 | Sensor de luz |
 | Buzzer activo o pasivo | 1 | Actuador |
 | Servo SG90 (o similar) | 1 | Barrera de los ejemplos 13 y 14 |
+| LCD 16x2 con modulo I2C | 1 | PCF8574, direccion 0x27 |
+| OLED SSD1306 128x64 | 1 | I2C, direccion 0x3C |
 | Fuente externa de 5 V | 1 | Alimentar el servo (nunca el pin 5V) |
 | HC-SR04 | 1 | Sensor de distancia |
 | Cables dupont | 20 | Conexiones |
